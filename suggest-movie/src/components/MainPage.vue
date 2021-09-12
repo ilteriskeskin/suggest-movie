@@ -76,7 +76,7 @@ export default {
     },
 
     getList() {
-      let url = "https://imdb-api.com/en/API/Top250Movies/" + api_key;
+      let url = "https://imdb-api.com/en/API/Top250Movies/" + this.api_key;
       axios.get(url).then((response) => {
         this.result = this.randomMovie(response.data.items);
       });
